@@ -35,10 +35,11 @@
   "homepage": "https://cgjgh.github.io/react/#/dashboard",
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
+    "winStart": "set \"GENERATE_SOURCEMAP=false\" && react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "winBuild": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
-    "deploy" : "npm run build&&gh-pages -d build",
-    "winDeploy" : "npm run winBuild&&gh-pages -d build",
+    "deploy": "npm run build&&gh-pages -d build",
+    "winDeploy": "npm run winBuild&&gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
@@ -62,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "@wixc3/react-board": "^2.4.0",
     "eslint": "8.39.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-import": "2.27.5",
